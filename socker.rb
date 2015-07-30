@@ -3,6 +3,7 @@ require 'sinatra-websocket'
 
 set :server, 'thin'
 set :sockets, []
+set :bind, "0.0.0.0"
 
 get '/' do
   if !request.websocket?
